@@ -1,0 +1,106 @@
+Arrays: Arrays are used to store a collection of elements with each element having unique address called 'index'
+Always index values starts from zero and increases by one
+eg: let arr = [21,22,23];
+    console.log(arr[0])  //21
+    console.log(arr[1])  //22
+    console.log(arr[2])  //23
+    console.log(arr[3])  //undefined
+    Any unknown value of array will be undefined and arrays are limitless
+    arr[25]= 1; // it will add 1 to the 25th index of arr, so now arr total length is 26
+
+    Arrays compare the addresses , not the values
+    let arr = [5,2];
+    let arr1 = [5,2];
+    console.log(arr == arr1)  //false since both have different addresses
+    let arr2 = arr;
+    console.log(arr2 == arr)  //true
+
+    Arrays are mutable, Any operation on arrays might change original array
+    let arr = [5,2];
+    arr.reverse(); // it changes original array
+    console.log(arr) //[2,5]
+       
+    Array Methods: Arrays uses various default methods such as
+    i. push(elements) : it will add elements at the end of the array
+    ii. pop(): it will remove element (last element) of the array
+    iii. unshift(elements) : it will add elements at the start of the array
+    iv. shift(): it will remove first element of the array
+    v. splice(starting_index,deleteCount,inseringElements):
+          it will remove elements based on deleteCount starting from starting_index and will add inseringElements starting from starting_index
+  task:
+      let friends = ["sheldon","monika","chandler","ross","rachel","penny"];
+      //1. remove sheldon and add "phoebe"
+      //2. remove penny and add "joey"
+      //3. add "becca" in between ross and rachel
+
+    vi. indexOf('element') : returns index of a particular element in the given array but it returns first occurence only
+    vii. lastIndexOf('element'): returns the index of last occurence of particular element in given array
+    viii. reverse(): it reverse the array elements and mutates original array
+    ix. forEach(callback) : forEach is used to iterate throught the complete array and pass element and index to callback function for each and every element of the array
+       ArrayName.forEach(function(elemenet,index){
+              //body
+       })
+    x. map(callback): map is also used exactly like forEach but forEach cannot return a value and map will return value for each and every array element
+     ArrayName.map(function(elemenet,index){
+              //body
+       })
+  xi. filter(callback): filter is used exactly like map but it returns only the elements that satisfies return condition
+ ArrayName.filter(function(elemenet,index){
+              //body
+       })
+  xii. some(callback)/every(callback):
+       some will return true if atleast one element satisfies condition
+       every will return true only if every element satisfies return condition
+        ArrayName.some(function(elemenet,index){
+              //body
+       })
+
+  xiii. find(callback): it will return the first element that satisfies the given condition
+  ArrayName.find(function(elemenet,index){
+              //body
+       })
+   
+  xiv. reduce(callback,initialValue): it is used to find or performed cumulative operations
+  ArrayName.reduce(function(prev,curr){},initialValue);
+  
+  xv. sort(): sort is used to sort out the elements based on callback it receives. if callback is not mentioned, it will sort alphabetically
+     ["raj","john","apple"].sort()   //["apple","john","raj"]
+     [5,8,7,1,-1,0].sort() // [-1,0,1,5,7,8]
+     [2,24,26,1,121,125,8] .sort() //[1,121,125,2,24,26,8] 
+    for numericals, sort(callback)
+    if callback returns -ve, it will not do any action
+    else if callback returns +ve , it will swap the number
+    [2,24,26,1,121,125,8] .sort(function(a,b){return a-b});
+    
+for ascending:   [2,24,26,1,121,125,8] .sort((a,b)=>a-b);
+for descending:   [2,24,26,1,121,125,8] .sort((a,b)=>b-a);
+
+
+Objects: Object is a physical Entity. it contains properties and methods.
+apple  -- color, taste, shape, size,ripe()
+prasad -- name, phno, email,teach(),code()
+class  -- general structure to Object  -- collections of objects
+FRUIT  -- taste, color,shape,size,ripe()
+apple is fruit,mango
+
+     class            objects
+     Car                nano, maruthi
+       --speed,color
+
+let object_name = {
+       property: key,
+       propertiy2 :key2
+       ....
+}
+let user = {
+    username: "john",
+    display: function ()
+    {
+        console.log(this.username+" is displaying")
+    }
+}
+user.display();
+
+// this means current calling object
+
+this refers to current calling object but  arrow functions will not allow this, they always points to window object
