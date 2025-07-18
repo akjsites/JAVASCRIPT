@@ -1,0 +1,70 @@
+Operators : Operators are used  to perform operations between multiple operands
+There are several types of operators in JS such as
+1. Arithematic Operators:
+   These operators are used to perform Arithematic operations between numerical values
+   eg: + ,- , * ,/, %(remainder), **(power)
+   let a = 10, b = 20;
+console.log(a + b); //30
+console.log(a - b); //-10
+console.log(a * b); //200
+console.log(a / b); //0.5
+console.log(a % b); //10
+console.log(2 ** 3); //8
+
+2. logical operators : These operators are used perform logical AND,OR, NOT with conditions
+   logical AND (&&) : it will be true only if both the conditions are true
+   logical OR (||): it will be false only if both conditions are false
+   logical NOT (!) : it will be true if condition is false and will be false if condition is true
+   /* logical operators */
+console.log(a > 5 && b < 10); //F
+console.log(a > 5 || b < 10); //T
+console.log(!(a > 5)); //F
+
+3. Relational Operators: Relational Operators are used to compare the values
+    eg: > , < ,>= , <= ,==, ===, !=, !==
+    These operators returns boolean values.
+
+4. Assignment Operators : These operators are used to assign a value to operands
+   eg: += , -= ,*= ,/= ,%= ,**=,=
+   a+=2 ===> a=a+2;
+/* assignment operator */
+a = 3, b = 2;
+a += 2;   // a= a+2;
+console.log(a); //5
+a -= 2;  // a=a-2;
+console.log(a); //3
+a *= 2;  // a=a*2
+console.log(a); //6
+a /= 2;  // a=a/2
+console.log(a); //3
+a %= 2; //a=a%2
+console.log(a); //1
+a = 3;
+a **= 2; // a= a**2
+console.log(a) //9
+
+5. Ternary Operator: This operator is used to assign  a value based on a condition
+     let variable_name = (condition)  ? value1  : value2 ;
+     if condition is true , first value will be given to variable , else second value will be given to variable. 
+   eg: a = 5, b=3;
+     let c = (a>10) ? 20 : 30;
+
+     can you print message "pass" or "fail" based on marks ?
+
+6. unary operators: These operators uses single operand
+   eg: 
+   unary '+'   -- it is used to convert any datatype to numbers
+      +'5'  -->5
+
+   increment and decrement : we can increase the value or decrease the value by 1 using these operators.
+   ++  is used for increment ( increase value by 1 )
+   -- is used for decrement (decrease value by 1)
+   ++a  -- pre increment  -- it will first increase the value and assigns it
+   a++  -- post increment -- it will first assign the value and then increase it.
+   same thing applies for decrement also
+
+
+we have special operators like "typeof" which is used to find the type of a variable and nullish coelison operator(??)
+  a= undefined, b =2;
+  let c = a ?? b ;
+  it checks only first value is undefined or not, if it is, it will take second value else first value
