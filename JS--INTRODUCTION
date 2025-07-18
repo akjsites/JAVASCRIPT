@@ -1,0 +1,44 @@
+Programming: Programming or coding is a new school of thought to perform an algorithm(step by step probelm solving procedure)
+ 
+Javascript:
+===========
+    Javscript is synchronous, single threaded programming language. it is developed by  brenden Eich in 1995. initally it is named as "Livescript". To use popularity of "Java", it is renamed as "javascript" . Javascript is used for functionality and behaviour of web pages.
+      Javascript is run by the Browsers. Every browser will have a JS engine that runs the JS. for google chrome JS engine is v8.
+    How to connect JS into HTML?
+   There are two ways to include JS into HTML
+    i. internal JS
+    ii. External JS
+
+    i. Internal JS: In Internal JS, script tag is used along with JS code
+           <script>
+                //code
+           </script>
+  ii. External JS : In External JS, script tag is used with src(path to external file)
+            <script src="path to js"></script>
+
+   Every browser contains lot of tools to help developer debugging called developer Tools(access by right click and inspect)
+
+   variables or identifiers: variables are used to store the values. we can declare variables in Javascript in three ways i.e., var, let and const
+
+      var is a function scoped variable. we can redeclare, reassign these value. var variables can also be used before initialization.
+
+      var variable_name= value;
+
+      console.log(a);  //undefined  -- var variables can be used before initialisation
+        var a = 10;
+        console.log(a);
+        var a = 20;  //redeclaration
+        a = 35;  //reassign
+      
+      let and const : let and const are block scoped variable. we cannot redeclare them and we cannot access them before initialisation. 
+      let can reassign the values but const cannot.
+
+      //console.log(b)  // let and const cannot be used before initialization
+         let b = 10;   
+      // let b = 20;   let and const cannot be redeclared
+         b = 20;
+         console.log(b);
+
+         const c = 10;
+         // c = 20;   const cannot reassign
+ 
