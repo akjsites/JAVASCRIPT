@@ -1,0 +1,72 @@
+Javascript Provides so many defaultMethods, Here we discuss default number,math and string Methods.
+Number Methods: 
+   i. toFixed(value): it is used to round up number to specific no of digits after decimal
+   let n = 12.268594;
+console.log(n.toFixed(2)); //12.27
+   ii. toPrecision(value): it is used to round up number to specific no of digits from starting
+   let n=12.268594;
+   console.log(n.toPrecision(2)) //12
+   iii. toString(base): it is used to convert number to string with specific base
+   let n=5;
+   console.log(n.toString(2)) //101
+
+Math Methods:  These methods are provided by Math class and are used for Mathematical operations.
+
+
+/* Math Methods */
+let a = 25, b = 27;
+console.log(Math.sqrt(a));
+console.log(Math.cbrt(b));
+console.log(Math.abs(-10));
+console.log(Math.pow(5, 3), 5 ** 3);
+console.log(Math.max(5, 4, 3, 7, 2));
+console.log(Math.min(5, 4, 3, 7, 2));
+console.log(Math.round(5.19));
+console.log(Math.ceil(-2.41));  // upper interger value
+console.log(Math.floor(2.41)); // lower integer value
+console.log(Math.random()*10000)
+// make 4 digit OTP using Math.random()
+console.log(Math.round(Math.random() * 10000))
+// make dice 1-6 random value
+console.log(Math.ceil(Math.random() *6))
+
+// generate a random number between 5-10;
+console.log(Math.round(Math.random() *5)+5)
+
+
+Strings : Strings are used to represents aphanumeric values such as name, username,paragraphs etc.,
+ Strings can be represented by using single quotes, double quotes or backticks.
+ Strings also stores the data as an array of characters where each character assigned an index which always starts from zero
+
+ let str = "Javascript";
+ console.log(typeof str);
+ let str = "Javascript"
+console.log(typeof str)
+let str1 = 'javascript'
+let msg = "The time is 12 o' clock";
+let msg2 = 'The gandhi said, "Good night"'
+let a = 10, b = 20;
+console.log("The sum of " + a + " and " + b + " is " + (a + b));
+console.log(`The value of a is ${a}`);
+console.log(`The sum of ${a} and ${b} is ${a+b}`)
+
+There is no difference between single or double quote but for dynamic strings with backticks(`)
+backticks can provide variable values or perform operation using ${}. This type od strings are also called Template Literals
+
+String Methods: Strings in Javascript Provides lot of Methods such as 
+   i. length: returns total no of characters inside a string
+   ii. toUpperCase(): returns upperCase converted value of given string
+   iii. toLowerCase(): returns Lowercase converted value of given string
+   iv. startsWith('string'): returns true or false based on weather string is starting with given sub string or not
+   v. endsWith('string'): returns true or false based on weather string is ending with given sub string or not
+   vi. trim(): remove the spaces from first and last of given string
+   vii. indexOf('character'): returns first Occurence index of given character
+   viii. lastIndexOf('character'): returns last Occurence index of given character
+   ix. charAt(index): returns the character at specified index.
+   x. slice(start,end): returns sub string or a portion of original string from start index to end index. end index is not included. Incase, end index is not provided, it will return entire string from start index
+   xi. split: returns an array of strings remained after splitting the given string based on delimiter
+     eg: "prasad".split('a')===> ["pr","s","d"]
+
+   xii. includes : return true or false based on whether the element existed in given string or not
+
+   eg:   "prasadddddd"
