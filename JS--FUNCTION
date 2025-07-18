@@ -1,0 +1,67 @@
+Functions: functions are used to perform a specific task , instead of executing lot of code, code will be divided into logical sub parts called functions
+   functions are easy to debug, easy to understand the code and also provide code reusability
+   syntax 
+       function function_name(parameters)  ---> function prototype 
+       {
+        //body of the function        ---> function definition
+       } 
+
+       function_name(arguments)         ---> function call
+
+
+eg: function display(){
+    console.log("hello world")
+}
+
+display();
+
+functions can take parameters and if arguments are not passed for parameters then value will be undefined, we can also give default values in parameters
+
+function taxiFare(km,cost=10){
+    console.log(`The total fare is : ${km*cost}`)
+}
+taxiFare(5,5);
+taxiFare(5);
+
+function can even return a value using keyword 'return'
+// write a function which return product of two numbers
+function mul(a,b){
+    return a*b;
+}
+
+let x  = mul(5,2);
+console.log(x)
+
+
+functions are treated as variables in javascript, we can even functions as declared as a variable called function expression
+function sub (a, b)
+{
+    console.log(a - b);
+}
+console.log(sub);
+let sub2 = function (a, b) { console.log(a - b) };
+sub2(5, 2);
+//Arrow function
+let sub3 = (a, b) => console.log(a - b);
+
+Arrow functions are the modern way of writing of function expressions . it will not contain function keyword and contains arrow after parameters and In case of single statement definitions, it doesn't need braces and return keyword
+
+
+callback functions: Functions can be passed as a parameter to another function.The function which is passed as a parameter is called callback function and the function that receives another function as parameter is called Higher Order Function
+// callbacks 
+function add (a, b)
+{
+    console.log(a + b);
+}
+function minus (a, b)
+{
+    console.log(a-b)
+}
+function calculate (p, q, r)
+{
+    r(p, q);
+}
+calculate(5, 4, add);
+calculate(5, 4, minus)
+
+closures:  if two functions are nested and inner function remembers outer function values even after outer function execution ended. this type of memory is called closure. it is used in real time in techniques like memorization
