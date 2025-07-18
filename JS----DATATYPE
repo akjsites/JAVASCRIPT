@@ -1,0 +1,58 @@
+Datatypes:Datatypes defines the type of data. JS is dynamically typed language. There is no fixed data type for any variable. its Datatype depends value it is holding.. 
+ Basically There two Datatypes
+    i. Primitive
+    ii. Non- Primitive or reference data types 
+
+i. Primitive : These datatypes compares the values and immutable.The Primitive datatypes in Javascript are
+    a. number
+    b. string
+    c. boolean
+    d. undefined
+    e. null
+
+ii. Non-Primitive : These datatypes are also called reference datatypes. They hold address and mutable. The Non Primitive Datatypes are:
+    a. functions
+    b. Arrays
+    c. objects
+
+
+let a = 10
+console.log(a, typeof a);
+a = "prasad";
+console.log(a, typeof a);
+a = true;
+console.log(a, typeof a);
+a = undefined;
+console.log(a, typeof a);
+//console.log(b);
+a = null;
+console.log(a, typeof a);
+function myFun () { };
+console.log(myFun, typeof myFun)
+let arr = [2, 5, 6];
+console.log(arr, typeof arr)
+let obj = {};
+console.log(obj,typeof obj)
+
+
+Typecasting: converting one data type into another datatype is called Typecasting. There are two types of Typecasting
+ i. Implicit 
+ ii. Explicit
+
+ i. Implicit: By Default, when operations are performed between two operands , one will automatically convert into another datatype
+ console.log(5 + '4');   //'54'
+console.log(true + '5');   //'true5'
+console.log(5 - '4');  // 1
+console.log(5 * '4'); //20
+console.log(5 - 'raj'); //NAN - Not a number
+console.log(5 + true);  // 6
+console.log(null+1) //1
+
+ii. Explicit : we can convert datatypes external using methods like Number(),String(),Boolean(),parseInt(),parseFloat() , unary +
+Number()  -- it is used to convert any value to number
+parseInt() -- it is used to convert any value to integer
+parseFloat() -- it is used to conver any value to float(decimal)
+String() -- it is used to convert any value to string. we can also use toString().
+Boolean() -- it is used to convert any value to boolean (true or false)
+unary +  -- it is the modern way to conver any value to number
+     eg:  4 + +'5'   ---->9
