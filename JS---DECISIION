@@ -1,0 +1,45 @@
+Decision Making Statements: These Statements are also called Control statements . Based on a condition true or fasle, we can change the flow of execution. so they are called as Decision Making statements
+There are two Decision Making statements
+   i. if
+   ii. switch
+
+   i. if(condition): if is used to change the flow based on a condition
+   syntax: if(condition){
+    //statements
+   }
+   The statements will get executed only if the condition is true
+   eg: let a=5;
+   if(a>6){
+    console.log("hi")
+   }
+
+   if-- else: These flow is used to change the execution of statement on true or false of a condition
+   syntax: if(condition){
+    //statements
+   }
+   else
+   {
+    //statements
+   }
+   if--else--if : it is used to check multiple conditions at different stages
+   syntax: if(condition){
+    //statements
+   }
+   else if(condition){
+    //statements
+   }
+   else if(condition){
+    //statements
+   }
+   else{
+    //statements
+   }
+
+switch: switch is used as an alternative to if else if. it is used when we have multiple conditions to check. it matches with the case and executes the statements. After Execution , to End switch block, we use 'break' statement
+  switch(value){
+    case value1: //statements ; break;
+    case value2: //statements ; break;
+    case value3: //statements ; break;
+    default: //statements; break;
+  }
+  default will get executed when none of the cases matched
