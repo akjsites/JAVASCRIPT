@@ -1,0 +1,38 @@
+Document Object Model:
+    The complete html and css code will be saved inside an object called "document" and this object is presented to the Browser, so manipulating document object will manipulate Browser presented code
+    For this, first we need to select html elements in JS and then manipulate it.
+
+    DOM selection :
+        we can select html elements in JS using following methods
+    i. document.getElementsByTagName('tagname'):
+              This method is used to get elements from document based on tag name but it returns array of elements
+    ii. document.getElementsByClassName('className'):
+              This method is used to get elements from document based on class name but it returns an array of elements
+    iii. document.getElementById('idname'): 
+              This method is used to get element from document based on id name but it returns single element
+    iv. document.querySelector('query'):
+              This method id used to select an element from document based on a query but it selects only first element that matches query
+    v. document.querySelectorAll('query'):
+              This method is used to select an element from document based on query but it selects all elements that matches the query 
+    console.log(document)
+const a = document.getElementsByTagName('h1')
+console.log(a[0])
+const b = document.getElementsByClassName('head')
+console.log(b[0])
+const c = document.getElementById('heading')
+console.log(c)
+const d = document.querySelector('.head');
+console.log(d)
+const e = document.querySelectorAll(".head")
+console.log(e)
+  ii. DOM Manipulation: 
+       a. textContent : it is used to manipulate/select the text inside the element
+       b. innerHTML : it is used to manipulate/select the HTML inside the element
+       c. style : it is used to select/manipulate the styling of element (css of the element)
+       d. classList : it is used to access the classes of element and used to add, remove or toggle the classes
+       e. value :  it is used to access/manipulate the value of input
+       f. properties : we can use properties such as src,href,height etc.., to manipulate/access the elements
+
+iii. creating element:
+           document.createElement('elementName'): it will create an element
+           we can add this created element into existing elements using append or appendChild. append is used for adding multiple elements, appendChild is used for adding single element.
