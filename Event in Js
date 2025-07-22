@@ -1,0 +1,67 @@
+Events : Events are users actions. Users will do any action such as clicking a button, scrolling the page, typing something in keyboard, submitting a form etc.., All of these are considered as events which eventually triggers some functions.
+   Events can be declared in two ways such as
+   i. Event handlers: Event handlers triggers functions based on events given in HTML. They always starts with 'on' like onclick,onchange,oninput,onsubmit etc..,
+   <button onclick="fun()">click me</button>
+   ii. Event Listners : Event Listners triggers functions based on events given in JS. They use methods such as 'addEventListner' and 'removeEventListener'. using this we can call multiple functions for single event and event propogation also possible
+   element.addEventListner('eventName',callback function)
+
+Types of Events : There are different types of events classified based on source of event such as 
+    i. mouse events
+    ii. keyboard events
+    iii. form events
+    iv. window events
+
+i. mouse events:   These events are triggered by users mouse actions
+   eg: click , dblclick, mouseover,mouseout,mouseup,mousedown etc..,
+// HTML
+      <h1 id="heading">Hello world</h1>
+//JS
+      document.getElementById('heading').addEventListner('mouseover', function(){
+         document.getElementById('heading').style.color="green"
+      })
+
+
+ii. keyboard events : These events are activated by users keyboard actions such as pressing a button in keyboard
+eg: keydown,keyup
+//JS
+document.addEventListner('keyDown', function(e){
+   if(e.key == 'a'){
+    console.log("hi")
+   }
+})
+iii. form events : These events are activated by users form actions such as input the data, select the data , change the data,submit the data
+eg: input,select,change,submit etc..,
+The values entered in inputs will be inside eventObject.target.value
+<form id="myForm">
+    <input type="text" id="na" placeholder="Enter user name" />
+    <input type="text" id="pwd" placeholder="Enter password" />
+    <button>submit</button>
+</form>
+document.getElementById('myForm').addEventListener('submit',function(e){
+    e.preventDefault();
+    const na = document.getElementById('na');
+    const pwd= document.getElementById('pwd');
+    if(na.value == ''){
+        alert("username is empty")
+    }
+    if(pwd.value==''){
+         alert("password is empty")
+    }
+})
+
+iv. window events: These events are used based on users general actions such as scroll, load the website, abort an opertion, resize the page etc..,
+eg: load, scroll
+window.addEventListener('load', function(){
+    console.log("hello world")
+})
+
+Event propogation :  Events in javascript automatically propogated through nested elements.we can stop the flow  or propogation of events by using stopPropogation();
+Event propogation is of two types
+   i. capturing
+   ii. Bubbling
+
+Bubbling: Bubbling is the default propogation of events. it uses  bottom up approach,it starts from current element and runs towards top level element with similar event.
+capturing: capturing can be activated by make third paramater of addEventListener as 'true'. it uses top down approach. it starts from top level element with similar event and runs towards current element
+
+
+Event Delegation :  it is a technique in javascript to handle multiple events by attaching an event its parent element. so the approach of attaching single event to parent instead of individual events to all child items is called event Delegation. it is the real time example of Bubbling.
