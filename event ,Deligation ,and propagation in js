@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>*{transition: all 1s ease;}</style>
+</head>
+<body>
+    <h1 id="heading">Hello world</h1>
+    <form id="myForm">
+    <input type="text" id="na" placeholder="Enter user name" />
+    <input type="text" id="pwd" placeholder="Enter password" />
+    <button>submit</button>
+    </form>
+    <p id="count">0</p>
+    <h2>Do you love Javascript?</h2>
+    <button>Yes</button>
+    <button id="btn" style="position: absolute;">No</button>
+  <div id="gp" style="height: 400px; width: 400px;border: 1px solid red;">
+    <div id="p" style="height: 200px; width: 200px;border: 1px solid red;">
+        <div id="c" style="height: 100px; width: 100px;border: 1px solid red;">
+            <button id="mybtn">click me</button>
+        </div>
+    </div>
+  </div>
+   <div id="buttons">
+     <button>Apple</button>
+     <button>Banana</button>
+     <button>Mango</button>
+     <button>papaya</button>
+   </div>
+
+
+
+
+
+
+
+
+    <script src="./script.js"></script>
+</body>
+</html>let c = 0;
+const para = document.getElementById('count')
+function incr ()
+{
+    c++;
+    para.textContent = c
+}
+function display ()
+{
+    console.log("hello world")
+}
+document.getElementById('btn').addEventListener('click', function ()
+{
+    incr();
+    display();
+})
+ document.getElementById("heading").addEventListener("mouseover", function () {
+        document.getElementById("heading").style.color = "green"
+ })
+  document.getElementById("btn").addEventListener("mouseover", function () {
+      document.getElementById("btn").style.top = Math.round(Math.random() * 100) + "%"
+      document.getElementById("btn").style.left =
+                Math.round(Math.random() * 100) + "%"
+    })
+document.addEventListener("keydown", function (e) {
+    console.log(e);
+    if (e.ctrlKey && e.key == 'a')
+    {
+        console.log("hi")
+    }
+    if (e.key == 'b')
+    {
+        console.log("bye")
+    }
+    if (e.ctrlKey && e.key == 'c')
+    {
+        e.preventDefault()
+        alert("don't copy")
+        console.log(e)
+    }
+})
+document.getElementById("myForm").addEventListener("submit", function (e) {
+    e.preventDefault()
+    const na = document.getElementById("na")
+    const pwd = document.getElementById("pwd")
+    if (na.value.trim() == "") {
+        alert("username is empty")
+    }
+    if (pwd.value.trim() == "") {
+        alert("password is empty")
+    }
+})
+
+window.addEventListener("load", function () {
+    console.log("hello world")
+})
+
+document.getElementById('mybtn').addEventListener('click', (e) =>
+{
+    alert("button is clicked")
+    // e.stopPropagation();
+},true)
+document.getElementById('c').addEventListener('click', () => alert("child is clicked"),true)
+document.getElementById('p').addEventListener('click', () => alert("parent is clicked"),true)
+document.getElementById('gp').addEventListener('click', () => alert("grand parent is clicked"),true)
+
+document.getElementById('buttons').addEventListener('click', (e) =>
+{
+    alert(e.target.textContent+" fruit is added")
+})
